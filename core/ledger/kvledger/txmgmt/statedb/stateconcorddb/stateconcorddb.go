@@ -120,15 +120,13 @@ func (vdb *VersionedDB) GetStateMultipleKeys(namespace string, keys []string) ([
 // startKey is inclusive
 // endKey is exclusive
 func (vdb *VersionedDB) GetStateRangeScanIterator(namespace string, startKey string, endKey string) (statedb.ResultsIterator, error) {
-  // return vdb.db.GetStateRangeScanIteratorWithMetadata(namespace, startKey, endKey, nil)
-  return nil, nil
+  return vdb.GetStateRangeScanIteratorWithMetadata(namespace, startKey, endKey, nil)
 }
 
 const optionLimit = "limit"
 
 // GetStateRangeScanIteratorWithMetadata implements method in VersionedDB interface
 func (vdb *VersionedDB) GetStateRangeScanIteratorWithMetadata(namespace string, startKey string, endKey string, metadata map[string]interface{}) (statedb.QueryResultsIterator, error) {
-
 //   requestedLimit := int32(0)
 // // if metadata is provided, validate and apply options
 //   if metadata != nil {
@@ -148,9 +146,8 @@ func (vdb *VersionedDB) GetStateRangeScanIteratorWithMetadata(namespace string, 
 
 //   _ := vdb.db.GetIterator(compositeStartKey, compositeEndKey)
 
-  // return newKVScanner(namespace, dbItr, requestedLimit), nil
+//   return newKVScanner(namespace, dbItr, requestedLimit), nil
   return nil, nil
-
 }
 
 // ExecuteQuery implements method in VersionedDB interface

@@ -67,7 +67,7 @@ func testCompositeKey(t *testing.T, dbName string, ns string, key string) {
   assert.Equal(t, key, key1)
 }
 
-// // TestQueryOnLevelDB tests queries on levelDB.
+// TestQueryOnLevelDB tests queries on levelDB.
 // func TestQueryOnLevelDB(t *testing.T) {
 //   env := NewTestVDBEnv(t)
 //   defer env.Cleanup()
