@@ -90,11 +90,11 @@ func testCompositeKey(t *testing.T, dbName string, ns string, key string) {
 //   assert.Nil(t, itr)
 // }
 
-// func TestGetStateMultipleKeys(t *testing.T) {
-//   env := NewTestVDBEnv(t)
-//   defer env.Cleanup()
-//   commontests.TestGetStateMultipleKeys(t, env.DBProvider)
-// }
+func TestGetStateMultipleKeys(t *testing.T) {
+  env := NewTestVDBEnv(t)
+  defer env.Cleanup()
+  commontests.TestGetStateMultipleKeys(t, env.DBProvider)
+}
 
 func TestGetVersion(t *testing.T) {
   env := NewTestVDBEnv(t)

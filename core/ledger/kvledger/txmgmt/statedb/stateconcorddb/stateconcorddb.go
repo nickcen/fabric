@@ -74,7 +74,7 @@ func (vdb *VersionedDB) ValidateKeyValue(key string, value []byte) error {
 
 // BytesKeySupported implements method in VersionedDB interface
 func (vdb *VersionedDB) BytesKeySupported() bool {
-  return true
+  return false
 }
 
 // GetState implements method in VersionedDB interface
