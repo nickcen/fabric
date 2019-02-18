@@ -29,7 +29,8 @@ type VersionedDBProvider struct {
 }
 
 const (
-  address     = "localhost:50051"
+  // address     = "localhost:50051"
+  address     = "39.107.78.147:50051"
 )
 
 // NewVersionedDBProvider instantiates VersionedDBProvider
