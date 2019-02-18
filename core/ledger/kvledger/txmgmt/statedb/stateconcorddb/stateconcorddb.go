@@ -20,7 +20,7 @@ import (
 var logger = flogging.MustGetLogger("stateconcorddb")
 
 var savePointKey = "last_save_point"
-var compositeKeySep = "_"
+var compositeKeySep = "-"
 
 // VersionedDBProvider implements interface VersionedDBProvider
 type VersionedDBProvider struct {
@@ -208,7 +208,6 @@ func (vdb *VersionedDB) GetLatestSavePoint() (*version.Height, error) {
 }
 
 func constructCompositeKey(database string, ns string, key string) string {
-  // return append(append([]byte(ns), compositeKeySep...), []byte(key)...)
   return database + compositeKeySep + ns + compositeKeySep + key
 }
 

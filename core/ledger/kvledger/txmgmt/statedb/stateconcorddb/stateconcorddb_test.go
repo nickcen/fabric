@@ -42,11 +42,11 @@ func TestMultiDBBasicRW(t *testing.T) {
   commontests.TestMultiDBBasicRW(t, env.DBProvider)
 }
 
-// func TestDeletes(t *testing.T) {
-//   env := NewTestVDBEnv(t)
-//   defer env.Cleanup()
-//   commontests.TestDeletes(t, env.DBProvider)
-// }
+func TestDeletes(t *testing.T) {
+  env := NewTestVDBEnv(t)
+  defer env.Cleanup()
+  commontests.TestDeletes(t, env.DBProvider)
+}
 
 // func TestIterator(t *testing.T) {
 //   env := NewTestVDBEnv(t)
