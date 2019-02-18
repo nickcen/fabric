@@ -23,7 +23,7 @@ import (
 // "github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/statedb"
 "github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/statedb/commontests"
 // "github.com/hyperledger/fabric/core/ledger/kvledger/txmgmt/version"
-// "github.com/stretchr/testify/assert"
+"github.com/stretchr/testify/assert"
 )
 
 func TestMain(m *testing.M) {
@@ -54,18 +54,18 @@ func TestDeletes(t *testing.T) {
 //   commontests.TestIterator(t, env.DBProvider)
 // }
 
-// func TestCompositeKey(t *testing.T) {
-//   testCompositeKey(t, "ledger1", "ns", "key")
-//   testCompositeKey(t, "ledger2", "ns", "")
-// }
+func TestCompositeKey(t *testing.T) {
+  testCompositeKey(t, "ledger1", "ns", "key")
+  testCompositeKey(t, "ledger2", "ns", "")
+}
 
-// func testCompositeKey(t *testing.T, dbName string, ns string, key string) {
-//   compositeKey := constructCompositeKey(ns, key)
-//   t.Logf("compositeKey=%#v", compositeKey)
-//   ns1, key1 := splitCompositeKey(compositeKey)
-//   assert.Equal(t, ns, ns1)
-//   assert.Equal(t, key, key1)
-// }
+func testCompositeKey(t *testing.T, dbName string, ns string, key string) {
+  compositeKey := constructCompositeKey(dbName, ns, key)
+  t.Logf("compositeKey=%#v", compositeKey)
+  ns1, key1 := splitCompositeKey(compositeKey)
+  assert.Equal(t, ns, ns1)
+  assert.Equal(t, key, key1)
+}
 
 // // TestQueryOnLevelDB tests queries on levelDB.
 // func TestQueryOnLevelDB(t *testing.T) {
