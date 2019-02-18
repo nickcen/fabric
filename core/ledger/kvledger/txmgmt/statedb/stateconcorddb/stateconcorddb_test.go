@@ -96,11 +96,11 @@ func testCompositeKey(t *testing.T, dbName string, ns string, key string) {
 //   commontests.TestGetStateMultipleKeys(t, env.DBProvider)
 // }
 
-// func TestGetVersion(t *testing.T) {
-//   env := NewTestVDBEnv(t)
-//   defer env.Cleanup()
-//   commontests.TestGetVersion(t, env.DBProvider)
-// }
+func TestGetVersion(t *testing.T) {
+  env := NewTestVDBEnv(t)
+  defer env.Cleanup()
+  commontests.TestGetVersion(t, env.DBProvider)
+}
 
 // func TestUtilityFunctions(t *testing.T) {
 //   env := NewTestVDBEnv(t)
@@ -117,11 +117,11 @@ func testCompositeKey(t *testing.T, dbName string, ns string, key string) {
 //   assert.NoError(t, db.ValidateKeyValue("testKey", []byte("testValue")), "leveldb should accept all key-values")
 // }
 
-// func TestValueAndMetadataWrites(t *testing.T) {
-//   env := NewTestVDBEnv(t)
-//   defer env.Cleanup()
-//   commontests.TestValueAndMetadataWrites(t, env.DBProvider)
-// }
+func TestValueAndMetadataWrites(t *testing.T) {
+  env := NewTestVDBEnv(t)
+  defer env.Cleanup()
+  commontests.TestValueAndMetadataWrites(t, env.DBProvider)
+}
 
 // func TestPaginatedRangeQuery(t *testing.T) {
 //   env := NewTestVDBEnv(t)
@@ -129,8 +129,8 @@ func testCompositeKey(t *testing.T, dbName string, ns string, key string) {
 //   commontests.TestPaginatedRangeQuery(t, env.DBProvider)
 // }
 
-// func TestApplyUpdatesWithNilHeight(t *testing.T) {
-//   env := NewTestVDBEnv(t)
-//   defer env.Cleanup()
-//   commontests.TestApplyUpdatesWithNilHeight(t, env.DBProvider)
-// }
+func TestApplyUpdatesWithNilHeight(t *testing.T) {
+  env := NewTestVDBEnv(t)
+  defer env.Cleanup()
+  commontests.TestApplyUpdatesWithNilHeight(t, env.DBProvider)
+}
